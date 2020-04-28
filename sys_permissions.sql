@@ -1,0 +1,12 @@
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (1, '系统设置', 'null', 'menu', 0, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (2, '销售管理', 'null', 'menu', 0, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (3, '用户管理', 'user/list', 'menu', 1, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (4, '角色管理', 'role/list', 'menu', 1, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (5, '角色添加', 'role/add', 'button', 4, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (6, '角色删除', 'role/delete', 'button', 4, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (7, '角色修改', 'role/update', 'button', 4, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (8, '角色查询', 'role/find', 'button', 4, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (9, '用户添加', 'user/add', 'button', 3, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (10, '用户删除', 'user/delete', 'button', 3, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (11, '用户修改', 'user/update', 'button', 3, '开启');
+INSERT INTO `sys_permissions`(`id`, `NAME`, `url`, `TYPE`, `pid`, `available`) VALUES (12, '用户查询', 'user/find', 'button', 3, '开启');
