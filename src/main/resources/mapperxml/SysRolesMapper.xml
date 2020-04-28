@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.SysRolesMapper">
+  <resultMap id="BaseResultMap" type="com.example.pojo.SysRoles">
+    <!--@mbg.generated generated on Sun Apr 26 09:16:08 CST 2020.-->
+    <!--@Table sys_roles-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="rolename" jdbcType="VARCHAR" property="rolename" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="available" jdbcType="VARCHAR" property="available" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sun Apr 26 09:16:08 CST 2020.-->
+    id, rolename, description, available
+  </sql>
+</mapper>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.SysUsersMapper">
+  <resultMap id="BaseResultMap" type="com.example.pojo.SysUsers">
+    <!--@mbg.generated generated on Sun Apr 26 09:15:34 CST 2020.-->
+    <!--@Table sys_users-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="PASSWORD" jdbcType="VARCHAR" property="password" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="locaed" jdbcType="VARCHAR" property="locaed" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sun Apr 26 09:15:34 CST 2020.-->
+    id, username, phone, `PASSWORD`, salt, icon, address, locaed
+  </sql>
+
+  <!--查询用户所拥有的角色以及权限-->
+  <select id="findUserByName" parameterType="String" resultMap="shiroSelect">
+    select a.*,e.rolename,d.NAME from sys_users a
+    LEFT JOIN sys_user_role b on a.id=b.user_id
+    LEFT JOIN sys_role_permission c on  b.role_id=c.role_id
+    LEFT JOIN sys_permissions d on c.permission_id=d.id
+    LEFT JOIN sys_roles e on b.role_id=e.id
+    where  a.username=#{userName}
+    GROUP BY a.username,e.rolename,d.NAME
+
+  </select>
+  <resultMap id="shiroSelect" type="com.example.pojo.SysUsers">
+    <id column="username" property="username" />
+    <result column="PASSWORD" property="password" />
+    <result column="salt" property="salt" />
+    <collection property="roles" ofType="com.example.pojo.SysRoles">
+      <id column="rolename" property="rolename" />
+      <collection property="permissions" ofType="com.example.pojo.SysPermissions">
+        <id column="NAME" property="name" />
+      </collection>
+    </collection>
+  </resultMap>
+</mapper>

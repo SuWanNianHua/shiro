@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.SysPermissionsMapper">
+  <resultMap id="BaseResultMap" type="com.example.pojo.SysPermissions">
+    <!--@mbg.generated generated on Sun Apr 26 09:16:17 CST 2020.-->
+    <!--@Table sys_permissions-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="pid" jdbcType="INTEGER" property="pid" />
+    <result column="available" jdbcType="VARCHAR" property="available" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Sun Apr 26 09:16:17 CST 2020.-->
+    id, `NAME`, url, `TYPE`, pid, available
+  </sql>
+</mapper>
