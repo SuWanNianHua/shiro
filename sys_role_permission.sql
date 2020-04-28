@@ -1,0 +1,9 @@
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (1, 1, 1);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (2, 1, 8);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (3, 1, 12);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (4, 2, 1);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (5, 2, 2);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (6, 2, 3);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (7, 2, 4);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (8, 2, 12);
+INSERT INTO `sys_role_permission`(`id`, `role_id`, `permission_id`) VALUES (9, 3, 0);
